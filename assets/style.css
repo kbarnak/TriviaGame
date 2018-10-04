@@ -1,0 +1,46 @@
+body {
+    margin: auto;
+    padding: 0;
+    background: url(../assets/images/wheat.png);
+}
+
+/* .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+} */
+
+.container {
+    margin: 0 auto;
+    padding: 10px;
+    height: 950px;
+    width: 70%;
+    font-size: 55px;
+    background-color: #B4604E;
+    font-family: 'Sorts Mill Goudy', serif;
+    text-align: center;
+    float: none;
+}
+    
+.jumbotron {
+    background-color: #425172; 
+    color: white;
+    font-size: 25px;
+    font-family: 'Marck Script', cursive;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+}
+
+.timer {
+    font-size: 75px;
+}
+
+.rules {
+    font-size: 18px;
+    font-family: 'Sorts Mill Goudy', serif;
+    padding: 10px;
+    margin: 0 auto;
+
+}
+
