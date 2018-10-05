@@ -4,11 +4,11 @@ body {
     background: url(../assets/images/wheat.png);
 }
 
-/* .clearfix::after {
+.clearfix::after {
     content: "";
     clear: both;
     display: table;
-} */
+}
 
 .container {
     margin: 0 auto;

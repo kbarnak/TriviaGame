@@ -68,26 +68,40 @@ function startGame() {
 //Functions that displays the Coffee Questions from the Array 
 function displayQuestion() {
 
+    //     // question++;
+
+    //     var choicesArr = coffeeQuestions[questionIndex].choices;
+    //     var buttonsArr = [];
+
+    //     for (i = 0; i < choicesArr.length; i++) {
+    //         var button = $('<button>');
+    //         button.text(choicesArr[i]);
+    //         button.attr("#coffee-questions", i);
+    //         $("#answer-choices").append(button);
+    //     }
+
     var currentQuestion = coffeeQuestions[questionIndex];
     var parentDiv = $("<div>");
     var pQuestionText = $("<p>");
-    pQuestionText.text(coffeeQuestions[questionIndex].text);
+    // $("").text(coffeeQuestions[questionIndex].text);
     parentDiv.append(pQuestionText);
-
+    $(".quiz-questions").text(currentQuestion);
+    console.log(this)
+        ;
     //Dynamically display the options for the user
 
-    for (var i = 0; i < coffeeQuestions[questionIndex].choices.length; i++) {
-        // var optionButton = $("<button>");
-        // optionButton.addClass("btn btn-info");
-        // optionButton.text(currentQuestion.choices[i]);
-        // optionButton.val(i);
+    // for (var i = 0; i < coffeeQuestions[questionIndex].choices.length; i++) {
+    //     var optionButton = $("<button>");
+    //     optionButton.addClass("btn btn-info");
+    //     optionButton.text(currentQuestion.choices[i]);
+    //     optionButton.val(i);
 
-        // optionButton.on("click", function () {
-
-        // });
-        parentDiv.append();
-        $(".quiz-questions").append(parentDiv);
-    }
+    //     optionButton.on("click", function () {
+    //         console.log(this);
+    //     });
+    //     parentDiv.append();
+    //     $(".quiz-questions").append(parentDiv);
+    // }
 }
 
 //On CLICK function that starts the game by hiding the instructions (going back to first setTimer function) and displaying the quiz coffee questions
@@ -108,6 +122,17 @@ $("#start-button").on("click", function () {
 
 //Callback Function
 
+function endGame() {
+    $('#reset').on('click', function () {
+        // reset all variables and counts
+        clickCount = 0;
+        questionCount = 0;
+        score = 0;
+        gameTimer;
+        totalGameTime = 30;
+    })
+}
+
 //Display timer functions that makes the timer visible in the HTML and reduces the seconds remaining
 function startTimer() {
     gameTimer = setInterval(function () {
@@ -117,12 +142,9 @@ function startTimer() {
         if (totalGameTime === 0) {
             setInterval(gameTimer);
             endGame();
+            console.log(this);
         }
     }, 1000);
-
-
-
-
 }
 
 //Event Delegation
